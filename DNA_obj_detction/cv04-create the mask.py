@@ -89,12 +89,15 @@ def ori_img_masked(img, img_list, pt_list, index):
         
     t_img = img[abs_st_x:abs_end_x, abs_st_y:abs_end_y]
     
-    img_mask = img_list[index][x1 : x2, y1 : x2];
+    img_mask = img_list[index][x1 : x2, y1 : y2];
     
     t_img = np.multiply(t_img,img_mask);
     
     plt.imshow(t_img, cmap='gray')
     plt.show()
+    
+    return t_img;
+    
 
 
 

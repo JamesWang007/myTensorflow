@@ -258,9 +258,11 @@ for i in range(10, 20):
     
 
 ##
+    iso_img_ori_gray = []
 for i in range(10, 20):
-    ori_img_masked(img, isolated_imgs, orientation_pt_list, i);
+    ori_t_img = ori_img_masked(img, isolated_imgs, orientation_pt_list, i);
+    iso_img_ori_gray.append(t_img);                    
 
 
-
+cv2.imwrite("images/19.jpg", iso_img_ori_gray[19])
 
