@@ -257,12 +257,20 @@ for i in range(10, 20):
     show_imglist(isolated_imgs, i);
     
 
-##
-    iso_img_ori_gray = []
-for i in range(10, 20):
-    ori_t_img = ori_img_masked(img, isolated_imgs, orientation_pt_list, i);
-    iso_img_ori_gray.append(t_img);                    
+##  save the isolated images into a folder
+iso_img_ori_gray = []
+for i in range(len(isolated_imgs)):       #len(isolated_imgs)
+    iso_img_ori_gray.append(ori_img_masked(img, isolated_imgs, orientation_pt_list, i));              
+    cv2.imwrite("images/isolated_images/" + str(i) +  ".jpg", iso_img_ori_gray[i]);
 
 
-cv2.imwrite("images/19.jpg", iso_img_ori_gray[19])
+
+
+
+
+
+
+
+
+
 

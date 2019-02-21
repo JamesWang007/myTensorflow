@@ -60,7 +60,7 @@ for i in range(10, 20):
     ori_img_masked(img, img_seg_list, pt_st_list, i);
 
 #------------------------------------
-
+# from PIL import Image
 def ori_img_masked(img, img_list, pt_list, index):
     x, y = pt_list[index];
     abs_st_x, abs_st_y, abs_end_x, abs_end_y = x-100, y-100, x+199, y+199;
@@ -87,17 +87,26 @@ def ori_img_masked(img, img_list, pt_list, index):
         abs_end_y = 999;
         y2 = 1099 - y;
         
-    t_img = img[abs_st_x:abs_end_x, abs_st_y:abs_end_y]
+    t_img = img[abs_st_x:abs_end_x, abs_st_y:abs_end_y];
     
     img_mask = img_list[index][x1 : x2, y1 : y2];
     
     t_img = np.multiply(t_img,img_mask);
     
-    plt.imshow(t_img, cmap='gray')
-    plt.show()
+    
+    lx, ly = t_img.shape
+    if lx < 300 or ly < 300 :
+        top, bottom = 0, 0
+        left, right = 300 - lx, 300 - ly
+        
+        left = 0 if left < 0 else left
+        right = 0 if right < 0 else right
+        
+        color = [0,0,0]
+        
+        t_img = cv2.copyMakeBorder(t_img, top, bottom, left, right, cv2.BORDER_CONSTANT, value=color)
     
     return t_img;
-    
 
 
 
