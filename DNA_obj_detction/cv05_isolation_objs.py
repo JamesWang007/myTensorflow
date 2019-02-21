@@ -125,42 +125,6 @@ class Stack:
             
     
 # ------ Functions ------
-def ori_img_masked(img, img_list, pt_list, index):
-    x, y = pt_list[index];
-    abs_st_x, abs_st_y, abs_end_x, abs_end_y = x-100, y-100, x+199, y+199;
-    # for the mask
-    x1 = 0
-    y1 = 0
-    x2 = 299
-    y2 = 299
-    
-    
-    if x < 100:
-        abs_st_x = 0;
-        x1 = 100 - x;
-        
-    if y < 100:
-        abs_st_y = 0;
-        y1 = 100 - y;
-        
-    if x > 800:
-        abs_end_x = 999;
-        x2 = 1099 - x;
-        
-    if y > 800:
-        abs_end_y = 999;
-        y2 = 1099 - y;
-        
-    t_img = img[abs_st_x:abs_end_x, abs_st_y:abs_end_y]
-    
-    img_mask = img_list[index][x1 : x2, y1 : y2];
-    
-    t_img = np.multiply(t_img,img_mask);
-    
-    plt.imshow(t_img, cmap='gray')
-    plt.show()
-
-
 
 # --- plotting an image from a list
 def show_imglist(img_list, index):
@@ -261,7 +225,7 @@ for i in range(10, 20):
 iso_img_ori_gray = []
 for i in range(len(isolated_imgs)):       #len(isolated_imgs)
     iso_img_ori_gray.append(ori_img_masked(img, isolated_imgs[i], orientation_pt_list[i][0], orientation_pt_list[i][1]));              
-    cv2.imwrite("images/isolated_images/" + str(i) +  ".jpg", iso_img_ori_gray[i];
+    cv2.imwrite("images/isolated_images/" + str(i) +  ".jpg", iso_img_ori_gray[i]);
 
 
 

@@ -63,12 +63,12 @@ for i in range(10, 20):
 # from PIL import Image
 def ori_img_masked(img, img_mask, x, y):
     # x, y = pt_list[index];
-    abs_st_x, abs_st_y, abs_end_x, abs_end_y = x-100, y-100, x+199, y+199;
+    abs_st_x, abs_st_y, abs_end_x, abs_end_y = x-100, y-100, x+200, y+200;
     # for the mask
-    x1 = 0
-    y1 = 0
-    x2 = 299
-    y2 = 299
+    x1 = 0;
+    y1 = 0;
+    x2 = 300;
+    y2 = 300;
     
     
     if x < 100:
@@ -80,31 +80,38 @@ def ori_img_masked(img, img_mask, x, y):
         y1 = 100 - y;
         
     if x > 800:
-        abs_end_x = 999;
-        x2 = 1099 - x;
+        abs_end_x = 1000;
+        x2 = 1100 - x;
         
     if y > 800:
-        abs_end_y = 999;
-        y2 = 1099 - y;
+        abs_end_y = 1000;
+        y2 = 1100 - y;
         
     t_img = img[abs_st_x:abs_end_x, abs_st_y:abs_end_y];
     
     img_mask = img_mask[x1 : x2, y1 : y2];
     
-    t_img = np.multiply(t_img,img_mask);
+    
+    # the img may be 3 channels
+    if len(cv2.split(img)) > 1:
+        img_mask = img_mask.reshape(img_mask.shape[0], img_mask.shape[1], 1);
+        t_img = t_img * img_mask;
+      
+    else:
+        t_img = np.multiply(t_img,img_mask);
     
     
-    lx, ly = t_img.shape
+    lx, ly = t_img.shape[:2]
     if lx < 300 or ly < 300 :
-        top, bottom = 0, 0
-        left, right = 300 - lx, 300 - ly
+        top, bottom = 0, 300 - lx;
+        left, right = 0, 300 - ly;
         
-        left = 0 if left < 0 else left
-        right = 0 if right < 0 else right
+        bottom = 0 if bottom < 0 else bottom;
+        right = 0 if right < 0 else right;
         
-        color = [0,0,0]
+        color = [0,0,0];
         
-        t_img = cv2.copyMakeBorder(t_img, top, bottom, left, right, cv2.BORDER_CONSTANT, value=color)
+        t_img = cv2.copyMakeBorder(t_img, top, bottom, left, right, cv2.BORDER_CONSTANT, value=color);
     
     return t_img;
 
