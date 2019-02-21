@@ -260,8 +260,8 @@ for i in range(10, 20):
 ##  save the isolated images into a folder
 iso_img_ori_gray = []
 for i in range(len(isolated_imgs)):       #len(isolated_imgs)
-    iso_img_ori_gray.append(ori_img_masked(img, isolated_imgs, orientation_pt_list, i));              
-    cv2.imwrite("images/isolated_images/" + str(i) +  ".jpg", iso_img_ori_gray[i]);
+    iso_img_ori_gray.append(ori_img_masked(img, isolated_imgs[i], orientation_pt_list[i][0], orientation_pt_list[i][1]));              
+    cv2.imwrite("images/isolated_images/" + str(i) +  ".jpg", iso_img_ori_gray[i];
 
 
 

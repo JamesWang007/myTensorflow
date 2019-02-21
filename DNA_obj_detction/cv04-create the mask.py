@@ -61,8 +61,8 @@ for i in range(10, 20):
 
 #------------------------------------
 # from PIL import Image
-def ori_img_masked(img, img_list, pt_list, index):
-    x, y = pt_list[index];
+def ori_img_masked(img, img_mask, x, y):
+    # x, y = pt_list[index];
     abs_st_x, abs_st_y, abs_end_x, abs_end_y = x-100, y-100, x+199, y+199;
     # for the mask
     x1 = 0
@@ -89,7 +89,7 @@ def ori_img_masked(img, img_list, pt_list, index):
         
     t_img = img[abs_st_x:abs_end_x, abs_st_y:abs_end_y];
     
-    img_mask = img_list[index][x1 : x2, y1 : y2];
+    img_mask = img_mask[x1 : x2, y1 : y2];
     
     t_img = np.multiply(t_img,img_mask);
     
