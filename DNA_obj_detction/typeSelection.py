@@ -108,6 +108,9 @@ class TypeSelection(QWidget):
         self.resize(self.W, self.H)
 
         self.Controller()
+        
+        quit = QAction("Quit", self)
+        quit.triggered.connect(self.closeEvent)
 
 
 ###########################
@@ -134,33 +137,36 @@ class TypeSelection(QWidget):
     #  - assign the type to an image
     #  - and load next image
     def btnSubmit(self):
-        if self.index + 1 < self.numImgs:         
+        if self.index < self.numImgs:         
             # assign a type value
             if self.b1.isChecked():
-                self.typeArray[self.index] = [self.index, 1]
-                print( "submit the result" + "object type: {}".format(self.typeArray[self.index][1]) )
+                self.typeArray[self.index][1] = 1
+                print( "submit the result\n" + "object type: {}".format(self.typeArray[self.index][1]) )
             elif self.b2.isChecked():
-                self.typeArray[self.index] = [self.index, 2]
-                print( "submit the result" + "object type: {}".format(self.typeArray[self.index][1]) )
+                self.typeArray[self.index][1] = 2
+                print( "submit the result\n" + "object type: {}".format(self.typeArray[self.index][1]) )
             elif self.b3.isChecked():
-                self.typeArray[self.index] = [self.index, 3]
-                print( "submit the result" + "object type: {}".format(self.typeArray[self.index][1]) )
+                self.typeArray[self.index][1] = 3
+                print( "submit the result\n" + "object type: {}".format(self.typeArray[self.index][1]) )
             elif self.b4.isChecked():
-                self.typeArray[self.index] = [self.index, 4]
-                print( "submit the result" + "object type: {}".format(self.typeArray[self.index][1]) )
+                self.typeArray[self.index][1] = 4
+                print( "submit the result\n" + "object type: {}".format(self.typeArray[self.index][1]) )
             elif self.b5.isChecked():
-                self.typeArray[self.index] = [self.index, 5]
-                print( "submit the result" + "object type: {}".format(self.typeArray[self.index][1]) )
+                self.typeArray[self.index][1] = 5
+                print( "submit the result\n" + "object type: {}".format(self.typeArray[self.index][1]) )
             else:
-                self.typeArray[self.index] = [self.index, 6]
+                self.typeArray[self.index][1] = 6
                 print( "submit the result\n" + "object type: Others".format(self.typeArray[self.index][1]) )
 
             
 
             # index ++, load next image; 
             self.index += 1
-            fileName = self.imgDir + str(self.index) + ".jpg"
-            self.label.setPixmap(QPixmap(fileName).scaled(self.lbl_W, self.lbl_H))
+            if self.index < self.numImgs:
+                fileName = self.imgDir + str(self.index) + ".jpg"
+                self.label.setPixmap(QPixmap(fileName).scaled(self.lbl_W, self.lbl_H))
+            else:
+                print("no more image")
         else:
             print("image index out of bound!")
 
@@ -208,7 +214,16 @@ class TypeSelection(QWidget):
             else:
                 print (b.text()+" is deselected")
 
-
+    def save(self):
+        with open("file.txt", 'w') as f:
+            for s in self.typeArray:
+                f.write(str(s) + '\n')
+    
+    def closeEvent(self, event):
+        print("close window event")
+        #print(self.typeArray)
+        self.save()
+        
 ################################
 # Project Entrance: main method
 ################################
