@@ -23,7 +23,7 @@ cv2.destroyAllWindows();
 iso_img_ori_gray = []
 for i in range(len(isolated_imgs)):       #len(isolated_imgs)
     iso_img_ori_gray.append(ori_img_masked(img_c, isolated_imgs[i], orientation_pt_list[i][0], orientation_pt_list[i][1]));              
-    cv2.imwrite("images/isolated_images/" + str(i) +  ".jpg", iso_img_ori_gray[i]);
+    cv2.imwrite("images/isolated_images/" + str(i) + ".jpg", iso_img_ori_gray[i]);
 
 
 
