@@ -1,6 +1,5 @@
-import cv03
-import cv04
-import cv05
+import codes
+from codes import (cv03, cv04, cv05, typeSelection as ts)
 
 #cv03.operating()   # takes 3 minutes
                     # genereate object mask - removed outliers
@@ -12,9 +11,10 @@ import cv05
 #cv05.operating()    # create isolated small images which contain small objects
 
 
+## should filter images
 
 
-
+ts.main()   # GUI -
 
 
 
