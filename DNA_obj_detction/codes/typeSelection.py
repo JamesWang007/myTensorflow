@@ -22,8 +22,8 @@ class TypeSelection(QWidget):
         super(TypeSelection, self).__init__(parent)
 
         ## - configuration
-        self.W, self.H = 2000, 1000
-        self.lbl_W, self.lbl_H = 1000, 1000
+        self.W, self.H = 1200, 800
+        self.lbl_W, self.lbl_H = 500, 500
         self.imgDir = "images/isolated_images/"
         self.imgName = "0.jpg"
         self.index = 0
@@ -31,7 +31,7 @@ class TypeSelection(QWidget):
         self.typeArray = []
         
 
-		## - layout
+        ## - layout
         layout = QHBoxLayout()
         ## - add a label
         self.label = QLabel()        

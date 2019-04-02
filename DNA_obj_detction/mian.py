@@ -1,5 +1,5 @@
 import codes
-from codes import (cv03, cv04, cv05, typeSelection as ts)
+from codes import (cv03, cv04, cv05, typeSelection as ts, MyWindow as mwin)
 
 #cv03.operating()   # takes 3 minutes
                     # genereate object mask - removed outliers
@@ -14,9 +14,10 @@ from codes import (cv03, cv04, cv05, typeSelection as ts)
 ## should filter images
 
 
-ts.main()   # GUI -
+#ts.main()   # GUI -
 
 
+mwin.main()
 
 
 

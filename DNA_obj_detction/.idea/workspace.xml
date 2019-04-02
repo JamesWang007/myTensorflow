@@ -11,47 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="typeSelection.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/typeSelection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cv05.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/cv05.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1000">
-              <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cv04.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codes/cv04.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mian.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mian.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="500">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -59,11 +23,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load_all_imgs.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="typeSelection.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codes/typeSelection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-880">
+              <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+              <folding>
+                <element signature="e#140#150#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyWindow.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codes/MyWindow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="16" selection-end-column="16" />
+              <folding>
+                <element signature="e#57#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="load_all_imgs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codes/load_all_imgs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="180">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -91,13 +79,17 @@
         <option value="$PROJECT_DIR$/cv04.py" />
         <option value="$PROJECT_DIR$/cv06.py" />
         <option value="$PROJECT_DIR$/cv05.py" />
-        <option value="$PROJECT_DIR$/mian.py" />
         <option value="$PROJECT_DIR$/load_all_imgs.py" />
         <option value="$PROJECT_DIR$/codes/load_all_imgs.py" />
+        <option value="$PROJECT_DIR$/interfaces/imgDecUI.py" />
+        <option value="$PROJECT_DIR$/interfaces/MyWindow.py" />
+        <option value="$PROJECT_DIR$/mian.py" />
+        <option value="$PROJECT_DIR$/codes/MyWindow.py" />
+        <option value="$PROJECT_DIR$/codes/typeSelection.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="2057" />
@@ -120,6 +112,10 @@
               <item name="DNA_obj_detction" type="462c0819:PsiDirectoryNode" />
               <item name="codes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DNA_obj_detction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -134,6 +130,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\windows\github\myTensorflow\DNA_obj_detction\codes" />
+      <recent name="D:\windows\github\myTensorflow\DNA_obj_detction\interfaces" />
       <recent name="D:\windows\github\myTensorflow\DNA_obj_detction" />
     </key>
   </component>
@@ -149,7 +146,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.load_all_imgs (2)">
+  <component name="RunManager" selected="Python.mian">
+    <configuration name="MyWindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DNA_obj_detction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interfaces" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\windows\github\myTensorflow\DNA_obj_detction\codes\MyWindow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="load_all_imgs (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DNA_obj_detction" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -227,13 +242,15 @@
       <item itemvalue="Python.load_all_imgs" />
       <item itemvalue="Python.load_all_imgs (1)" />
       <item itemvalue="Python.load_all_imgs (2)" />
+      <item itemvalue="Python.MyWindow" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mian" />
+        <item itemvalue="Python.MyWindow" />
         <item itemvalue="Python.load_all_imgs (2)" />
         <item itemvalue="Python.load_all_imgs (1)" />
         <item itemvalue="Python.load_all_imgs" />
-        <item itemvalue="Python.mian" />
       </list>
     </recent_temporary>
   </component>
@@ -251,13 +268,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1168" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="right" x="0" y="486" width="2560" height="407" id="Event Log" order="5" sideWeight="0.4874494" side_tool="true" weight="0.37265626" />
-      <window_info active="true" anchor="right" x="0" y="493" width="2560" height="394" id="Run" order="6" sideWeight="0.5125506" visible="true" weight="0.37226668" />
+      <window_info anchor="right" x="0" y="493" width="2560" height="394" id="Run" order="6" sideWeight="0.5125506" weight="0.35626668" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -280,7 +297,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -312,6 +329,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+          <folding>
+            <element signature="e#140#150#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -389,33 +409,53 @@
     <entry file="file://$PROJECT_DIR$/file.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codes/typeSelection.py">
+    <entry file="file://$PROJECT_DIR$/codes/imgDecUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="200">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mian.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="500">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codes/MyWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="e#57#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/codes/load_all_imgs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="180">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codes/typeSelection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-880">
+          <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding>
+            <element signature="e#140#150#0" expanded="true" />
           </folding>
         </state>
       </provider>

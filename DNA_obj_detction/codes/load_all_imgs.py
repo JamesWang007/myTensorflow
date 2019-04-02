@@ -6,3 +6,4 @@ files=glob.glob(path)
 for file in files:
     s = file.split('\\')
     print (s[-1])
+
