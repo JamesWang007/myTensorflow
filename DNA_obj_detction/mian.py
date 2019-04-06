@@ -14,10 +14,10 @@ from codes import (cv03, cv04, cv05, typeSelection as ts, MyWindow as mwin)
 ## should filter images
 
 
-#ts.main()   # GUI -
+ts.main()   # GUI -
 
 
-mwin.main()
+#mwin.main()
 
 
 
