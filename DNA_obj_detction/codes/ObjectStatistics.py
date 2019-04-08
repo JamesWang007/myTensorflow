@@ -40,7 +40,15 @@ class ObjectStatistics():
         y = self.__typeCounts
 
         tick_label = ['Thin L', 'Wide L', 'Thin Rec', 'Small Rec', 'Tiny Tile', 'Others']
-        plt.bar(x, y, tick_label=tick_label, width=0.8, color=['green'])
+
+        # plot value on top of each bar
+        fig, ax = plt.subplots()
+        bars = ax.bar(x, y, tick_label=tick_label, width=0.8, color=['green'])
+        for bar in bars:
+            height = bar.get_height()
+            ax.text(bar.get_x() + bar.get_width()/2., 1.05*height, '%d' % int(height),
+                    ha='center', va='bottom')
+
 
         plt.xlabel('x - axis')
         plt.ylabel('y - axis')
