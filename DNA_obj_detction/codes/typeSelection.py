@@ -239,3 +239,5 @@ def main():
 
 if __name__ == '__main__':
    main()
+
+#pyuic5 - o 目标文件名.py 源文件名.ui
