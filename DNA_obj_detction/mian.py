@@ -11,7 +11,7 @@ from codes import (cv03, cv04, cv05, typeSelection as ts, MyWindow as mwin)
 #cv05.operating()    # create isolated small images which contain small objects
 
 
-## should filter images
+        ## should filter images
 
 
 ts.main()   # GUI -

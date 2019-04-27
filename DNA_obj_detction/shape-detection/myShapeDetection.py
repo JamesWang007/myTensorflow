@@ -14,7 +14,6 @@ image = cv2.imread('../images/isolated_images/6.jpg')    # 'shapes_and_colors.pn
 resized = imutils.resize(image, width=300)
 ratio = image.shape[0] / float(resized.shape[0])
 
-
 # convert the resized image to grayscale, blur it slightly,
 # and threshold it
 gray = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
