@@ -75,7 +75,7 @@ class image_shape_detect:
                 if M["m00"] != 0:
                     cX = int((M["m10"] / M["m00"]) * ratio)
                     cY = int((M["m01"] / M["m00"]) * ratio)
-                shape = sd.detect(c)
+                #shape = sd.detect(c)
 
 
                 # multiply the contour (x, y)-coordinates by the resize ratio,
@@ -84,8 +84,8 @@ class image_shape_detect:
                 c *= ratio
                 c = c.astype("int")
                 cv2.drawContours(image, [c], -1, (0, 255, 0), 2)
-                cv2.putText(image, shape, (cX, cY), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (255, 255, 255), 2)
+                #cv2.putText(image, shape, (cX, cY), cv2.FONT_HERSHEY_SIMPLEX,
+                #    0.5, (255, 255, 255), 2)
 
 
                 # Rotated Rectangle
@@ -113,7 +113,7 @@ class image_shape_detect:
                 print ("area box: %.2f" % area_box)
                 print ("area ratio: %.2f" % r)
 
-                cv2.imshow("img_rot_rect", imgRotRect)
+                cv2.imshow(str(index), imgRotRect)
                 cv2.waitKey(0)
             index += 1
 
