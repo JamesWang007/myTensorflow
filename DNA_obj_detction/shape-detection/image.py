@@ -2,6 +2,9 @@ import cv2
 
 
 class dna_object:
+    id = None
+    type = None
+
     contours = None
     area_cnt = None         # area with contours
     area_minRect = None     # area of minRect
@@ -12,6 +15,7 @@ class dna_object:
     ftr_area_cnt = None
     ftr_area_minRect = None
 
+    not_a_dna = False
 
     def __init__(self):
         pass
@@ -45,13 +49,15 @@ class dna_object:
 
 class image:
     ## attributes
+
+    id = None
     image = None
     obj_list = [] # each image make contain multiple objects
 
 
 
     ## methods
-    def __init__(self, im = None):
+    def __init__(self, im=None):
         #print (self.__helloworld)
         self.image = im
 

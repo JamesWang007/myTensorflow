@@ -8,14 +8,13 @@ import cv2
 import numpy as np
 import math
 from LoadImages import LoadImages
+from image import image, dna_object
 
 class image_shape_detect:
     def __init__(self):
         self.images_list = []
-        self.feature_rect = []
-        self.feature_contours = []
-        self.feature_areaRatio = []
-        self.imageRotRect_list = []
+        self.image_obj_list = []
+        self.dna_object_list = []
 
     def findAreaRotRect(self, box):
         v1 = box[0]
@@ -42,9 +41,10 @@ class image_shape_detect:
         # load the image and resize it to a smaller factor so that
         # the shapes can be approximated better
         index = 0
-        for image in self.image_list:
-            resized = imutils.resize(image, width=300)
-            ratio = image.shape[0] / float(resized.shape[0])
+        index_obj = 0
+        for img in self.image_list:
+            resized = imutils.resize(img, width=300)
+            ratio = img.shape[0] / float(resized.shape[0])
 
 
             # convert the resized image to grayscale, blur it slightly,
@@ -61,11 +61,17 @@ class image_shape_detect:
             cnts = imutils.grab_contours(cnts)
             sd = ShapeDetector()
 
+            # create image objects
+            img_obj = image(img)
+            img_obj.id = index
+            self.image_obj_list.append(img_obj)
 
             # loop over the contours
             for c in cnts:
                 #area = cv2.contourArea(c)
                 #print('area is:', area)
+                if cv2.contourArea(c) <= 200:
+                    continue
 
                 # compute the center of the contour, then detect the name of the
                 # shape using only the contour
@@ -75,7 +81,7 @@ class image_shape_detect:
                 if M["m00"] != 0:
                     cX = int((M["m10"] / M["m00"]) * ratio)
                     cY = int((M["m01"] / M["m00"]) * ratio)
-                #shape = sd.detect(c)
+                shape = sd.detect(c)
 
 
                 # multiply the contour (x, y)-coordinates by the resize ratio,
@@ -83,8 +89,8 @@ class image_shape_detect:
                 c = c.astype("float")
                 c *= ratio
                 c = c.astype("int")
-                cv2.drawContours(image, [c], -1, (0, 255, 0), 2)
-                #cv2.putText(image, shape, (cX, cY), cv2.FONT_HERSHEY_SIMPLEX,
+                cv2.drawContours(img, [c], -1, (0, 255, 0), 2)
+                #cv2.putText(img, shape, (cX, cY), cv2.FONT_HERSHEY_SIMPLEX,
                 #    0.5, (255, 255, 255), 2)
 
 
@@ -92,30 +98,45 @@ class image_shape_detect:
                 rect = cv2.minAreaRect(c)
                 box = cv2.boxPoints(rect)
                 box = np.int0(box)
-                imgRotRect = cv2.drawContours(image, [box], 0, (0, 0, 255), 2)
-                self.imageRotRect_list.append(imgRotRect)
+                imgRotRect = cv2.drawContours(img, [box], 0, (0, 0, 255), 2)
+
 
                 # calculate the area
                 area_obj = cv2.contourArea(c)
                 area_box = self.findAreaRotRect(box)
 
+                # create dna_object
+                d_obj = dna_object()
+                d_obj.id = index_obj
+                d_obj.getAttributes(c, area_obj, area_box)
 
-                # save all features
-                #self.feature_rect.append(box)
-                #self.feature_contours.append(c)
-                r = 0.0
-                if area_box != 0:
-                    r = area_obj / area_box
-                #self.feature_areaRatio.append(r)
+                self.dna_object_list.append(d_obj)
+
+                r = d_obj.area_ratio
+
 
                 print ("# ", index)
                 print ("area obj: %.2f" % area_obj)
                 print ("area box: %.2f" % area_box)
                 print ("area ratio: %.2f" % r)
 
-                cv2.imshow(str(index), imgRotRect)
-                cv2.waitKey(0)
+
+                index_obj += 1
+
+
+                #cv2.imshow(str(index), imgRotRect)
+                #cv2.waitKey(0)
+
+
             index += 1
+
+    # filter object function, base on contour
+    def filter_image_contour(self, c):
+        if cv2.contourArea(c) < 200:
+            return False
+        return True
+
+
 
     #def save(self):
         #with open("../txtData/image_detect_result.txt", 'w') as f:
@@ -127,7 +148,7 @@ def main():
     img_sd = image_shape_detect()
     img_sd.detectAreaRatio()
 
-    cv2.imshow("", img_sd.imageRotRect_list[9])
+    cv2.imshow("", img_sd.image_list[9])
     cv2.waitKey(0)
 
 
