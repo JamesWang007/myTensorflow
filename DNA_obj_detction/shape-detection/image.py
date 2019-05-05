@@ -15,7 +15,7 @@ class dna_object:
     ftr_area_cnt = None
     ftr_area_minRect = None
 
-    not_a_dna = False
+    not_a_dna = False       # label : valid or not valid
 
     def __init__(self):
         pass
@@ -30,16 +30,19 @@ class dna_object:
 
             if a_c is not None:
                 self.area_cnt = a_c
+                self.ftr_area_cnt = a_c
             else:
                 raise TypeError('a_c is None')
 
             if a_m is not None:
                 self.area_minRect = a_m
+                self.ftr_area_minRect = a_m
             else:
                 raise TypeError('a_m is None')
 
             if a_m != 0:
                 self.area_ratio = (a_c / a_m)
+                self.ftr_ratio = self.area_ratio
             else:
                 self.area_ratio = 0.0
 

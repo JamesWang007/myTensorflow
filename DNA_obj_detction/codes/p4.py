@@ -13,7 +13,7 @@ file_folder = '../images/isolated_images/'
 files =glob.glob1(file_folder, '*.jpg')
 # if you want sort files according to the digits included in the filename,
 # you can do as following:
-files = sorted(files, key=lambda x:float(re.findall("(\d+)", x)[0]))
+files = sorted(files, key=lambda x: float(re.findall("(\d+)", x)[0]))
 
 index = 0
 for f in files:

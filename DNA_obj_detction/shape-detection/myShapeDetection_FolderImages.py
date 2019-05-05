@@ -137,6 +137,22 @@ class image_shape_detect:
         return True
 
 
+    def save_3features(self):
+        try:
+            with open("../statistics/3features.txt", 'w') as file:
+                for o in self.dna_object_list:
+                    s = '{0: <10.2f}{1: <10.2f}{2: <10.2f}\n'
+                    """
+                        ftr_area_cnt 
+                        ftr_area_minRect 
+                        ftr_ratio
+                    """
+
+                    file.write(s.format(o.ftr_area_cnt, o.ftr_area_minRect, o.ftr_ratio))
+        except:
+            print ("save_3_features")
+
+
 
     #def save(self):
         #with open("../txtData/image_detect_result.txt", 'w') as f:
@@ -147,9 +163,11 @@ class image_shape_detect:
 def main():
     img_sd = image_shape_detect()
     img_sd.detectAreaRatio()
+    img_sd.save_3features()
 
-    cv2.imshow("", img_sd.image_list[9])
-    cv2.waitKey(0)
+
+    #cv2.imshow("", img_sd.image_list[9])
+    #cv2.waitKey(0)
 
 
 
