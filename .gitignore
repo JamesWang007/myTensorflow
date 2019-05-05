@@ -9,3 +9,5 @@
 *.pyc
 *.iml
 *.pyc
+*.xml
+*.iml
