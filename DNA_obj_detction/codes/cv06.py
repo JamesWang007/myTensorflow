@@ -364,4 +364,12 @@ def operating_cv05(image_path=None, image_name=None, _M=None, _N=None):
         cv2.imwrite(image_path + "isolated_images/" + str(i) + ".jpg", iso_img_ori[i]);
 
 
+def main():
+    operating_cv03()
+    operating_cv04()
+    operating_cv05()
 
+
+
+if __name__ == "__main__":
+    main()
