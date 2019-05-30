@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 M, N = 1000, 1000
 img_seg_list = []
 pt_st_list = []
-img_mark = np.ones((M, N))
+img_mark = []
 
 
 def operating(_M = None, _N = None):
@@ -28,6 +28,8 @@ def operating(_M = None, _N = None):
         M = _M
     if _N:
         N = _N
+
+    img_mark = np.ones((M, N))
 
     img = cv2.imread('images/gray.jpg', -1);
     img_flt = cv2.imread('images/img_res.jpg', cv2.IMREAD_GRAYSCALE);

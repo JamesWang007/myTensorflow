@@ -14,16 +14,19 @@ from codes import (cv03, cv04, cv05, typeSelection as ts, MyWindow as mwin)
         ## should filter images
 
 
-ts.main()   # GUI -
+#ts.main()   # GUI -
 
 
 #mwin.main()
 
 
+import cv2
+b1 = cv2.imread("images/b/b1.bmp")
+b1 = cv2.resize(b1, (1000, 1000))
+cv2.imwrite("images/b/b1.jpg", b1)
 
-
-
-
-
+cv03.operating('images/b/', 'b1.jpg')
+cv04.operating()
+cv05.operating('images/b/', 'b1.jpg')
 
 

@@ -24,9 +24,10 @@ def operating(image_path = None, image_name = None, _M = None, _N = None):
 
     # --- load an image
     if image_path == None:
-        if image_name == None:
-            image_name = 'proteins.jpg'
         image_path = 'images/'
+    if image_name == None:
+        image_name = 'proteins.jpg'
+
     img = cv2.imread(image_path + image_name, cv2.IMREAD_GRAYSCALE)
     img_c = cv2.imread(image_path + image_name, cv2.IMREAD_COLOR)
     # Find object blocks in the original image
@@ -79,7 +80,7 @@ def operating(image_path = None, image_name = None, _M = None, _N = None):
     for i in range(len(isolated_imgs)):  # len(isolated_imgs)
         iso_img_ori.append(
             ori_img_masked(img_c, isolated_imgs[i], orientation_pt_list[i][0], orientation_pt_list[i][1]));
-        cv2.imwrite("images/isolated_images/" + str(i) + ".jpg", iso_img_ori[i]);
+        cv2.imwrite(image_path + "isolated_images/" + str(i) + ".jpg", iso_img_ori[i]);
 
 
 # ------------------------------------
