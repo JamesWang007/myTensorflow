@@ -188,7 +188,8 @@ def rm_outliers(img, r=2.0, th = 50):
 
 
 '''
-    Next phase it to isolate each small object and save them in small windoes. Functions will be implemented: isolating_imgs(...), pin_img(...)
+    Next phase it to isolate each small object and save them in small windoes. 
+    Functions will be implemented: isolating_imgs(...), pin_img(...)
 '''
 
 # --- classes functions are using
